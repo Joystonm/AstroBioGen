@@ -12,7 +12,7 @@ AstroBioGen is an interactive platform that lets users explore real NASA space b
 
 1. Clone the repository:
 ```
-git clone https://github.com/yourusername/AstroBioGen.git
+git clone https://github.com/Joystonm/AstroBioGen.git
 cd AstroBioGen/astrobiogen
 ```
 
@@ -23,7 +23,7 @@ npm run install-all
 
 3. Set up environment variables:
    - Create a `.env` file in the server directory based on `.env.example`
-   - Add your API keys for Groq and Tavily (optional - mock data will be used if not provided)
+   - Add your API keys for Groq ,Tavily ,NASA
 
 ### Running the Application
 
@@ -36,9 +36,6 @@ npm run dev
    - Client only: `npm run client`
    - Server only: `npm run server`
 
-3. Access the application:
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:5001
 
 ## What Problem Does It Solve?
 
@@ -64,6 +61,7 @@ AstroBioGen solves this by:
 - Gene expression heatmaps and charts
 - Groq-powered biological explanations
 - Tavily-powered Earth-medical relevance
+- Interactive Chatbot
 - Interactive experiment metadata viewer
 - Orbit visualization of experiment missions
 - Educational mode for biology learners
