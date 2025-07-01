@@ -1,0 +1,534 @@
+/* Game.css */
+body, html {
+  background: transparent !important;
+}
+
+.game-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+.game-title {
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+/* Solar System View */
+.solar-system-simple {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, #0f172a, #1e293b);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sun-simple {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at center, #fff176 0%, #ffd600 50%, #ff9800 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(255, 214, 0, 0.7);
+  margin-bottom: 1.5rem;
+  animation: rotate 60s linear infinite;
+}
+
+/* Updated planets container for straight line layout */
+.planets-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+  padding: 0 1rem;
+  overflow-x: auto;
+}
+
+/* Increased planet size */
+.planet-simple {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  animation: rotate 30s linear infinite;
+  flex-shrink: 0;
+}
+
+.planet-simple:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.planet-simple.visited {
+  box-shadow: 0 0 30px rgba(74, 222, 128, 0.8);
+}
+
+.planet-name {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+
+.saturn-ring {
+  position: absolute;
+  width: 200%;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: rotate(30deg);
+}
+
+.game-controls {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quiz-button {
+  padding: 10px 20px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quiz-button:hover:not(:disabled) {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+.quiz-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.explore-message {
+  margin-top: 0.5rem;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+/* Planet View */
+.planet-view {
+  background: linear-gradient(to bottom, #0f172a, #1e293b);
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: white;
+  margin-bottom: 0;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.back-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.planet-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 16px;
+}
+
+.error-message {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.planet-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.planet-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.image-carousel {
+  width: 100%;
+  position: relative;
+}
+
+.main-planet-image {
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto 0.5rem;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.image-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.nav-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.image-counter {
+  margin: 0 1rem;
+  font-size: 14px;
+}
+
+.image-thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.image-thumbnail {
+  width: 60px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.image-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.image-thumbnail.active {
+  border-color: #4f46e5;
+}
+
+.placeholder-image {
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.planet-sphere {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset -30px -30px 50px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+  animation: rotate 20s linear infinite;
+}
+
+.planet-moons {
+  margin-bottom: 1rem;
+}
+
+.planet-moons h3,
+.planet-news h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #a5b4fc;
+}
+
+.moon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.moon-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.moon-icon {
+  width: 15px;
+  height: 15px;
+  background-color: #e5e7eb;
+  border-radius: 50%;
+}
+
+.planet-news p {
+  line-height: 1.5;
+}
+
+.planet-view-quiz {
+  margin-top: 1rem;
+  display: block;
+  margin-left: auto;
+}
+
+/* Quiz View */
+.quiz-view {
+  background: linear-gradient(to bottom, #0f172a, #1e293b);
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: white;
+  margin-bottom: 0;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.quiz-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.quiz-questions {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quiz-question {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.question-text {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.question-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.option-label:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.option-label input {
+  margin: 0;
+}
+
+.submit-button {
+  display: block;
+  margin: 1.5rem auto;
+  padding: 10px 20px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.quiz-back {
+  display: block;
+  margin: 1rem auto;
+}
+
+/* Quiz Results */
+.quiz-results {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quiz-score {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.quiz-score h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.score-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #4f46e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1rem;
+}
+
+.score-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.score-message {
+  font-size: 1.1rem;
+  color: #a5b4fc;
+}
+
+.quiz-answers {
+  margin-top: 1.5rem;
+}
+
+.quiz-answers h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.quiz-answer {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid transparent;
+}
+
+.quiz-answer.correct {
+  border-left-color: #10b981;
+}
+
+.quiz-answer.incorrect {
+  border-left-color: #ef4444;
+}
+
+.answer-text {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.correct-answer {
+  color: #10b981;
+  margin-left: 1rem;
+}
+
+.reset-button {
+  display: block;
+  margin: 1.5rem auto;
+  padding: 10px 20px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .question-options {
+    grid-template-columns: 1fr;
+  }
+}

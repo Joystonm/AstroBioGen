@@ -1,0 +1,278 @@
+.space-data-container {
+  background-color: #f9fafb !important;
+  color: #111827 !important;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.space-data-title {
+  color: #1e40af !important;
+  font-weight: 700 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.space-data-subtitle {
+  color: #4b5563 !important;
+  margin-bottom: 2rem !important;
+}
+
+.data-card {
+  background-color: #ffffff !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  padding: 1.5rem !important;
+  margin-bottom: 2rem !important;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.data-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.data-card-title {
+  color: #1e40af !important;
+  font-weight: 600 !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.data-card-content {
+  color: #4b5563 !important;
+}
+
+/* ISS Tracker Styles */
+.iss-tracker-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.iss-tracker-map {
+  width: 100%;
+  height: 100%;
+  background-color: #cddeff !important;
+}
+
+.iss-marker {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  margin-top: -12px;
+  background-color: #ef4444 !important;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.iss-info {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.iss-info h3 {
+  color: #1e40af !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.iss-info p {
+  color: #4b5563 !important;
+  font-size: 0.875rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* Planetary System Styles */
+.planetary-system-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background-color: #000000 !important;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.planetary-system-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.planet-info {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+  color: #1f2937 !important;
+}
+
+/* Space Weather Styles */
+.space-weather-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.weather-metric {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #f3f4f6 !important;
+  border-radius: 0.375rem;
+}
+
+.weather-metric-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbeafe !important;
+  color: #1e40af !important;
+  border-radius: 0.375rem;
+  margin-right: 1rem;
+}
+
+.weather-metric-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937 !important;
+}
+
+.weather-metric-label {
+  font-size: 0.875rem;
+  color: #6b7280 !important;
+}
+
+.weather-alert {
+  padding: 0.75rem;
+  background-color: #fee2e2 !important;
+  border-left: 4px solid #ef4444 !important;
+  border-radius: 0.375rem;
+  margin-top: 1rem;
+}
+
+.weather-alert-title {
+  font-weight: 600;
+  color: #b91c1c !important;
+  margin-bottom: 0.25rem;
+}
+
+.weather-alert-message {
+  font-size: 0.875rem;
+  color: #991b1b !important;
+}
+
+/* Upcoming Launches Styles */
+.launches-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.launch-item {
+  display: flex;
+  padding: 1rem;
+  background-color: #f3f4f6 !important;
+  border-radius: 0.375rem;
+  border-left: 4px solid #3b82f6 !important;
+}
+
+.launch-date {
+  min-width: 80px;
+  text-align: center;
+  padding-right: 1rem;
+  border-right: 1px solid #e5e7eb !important;
+}
+
+.launch-day {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e40af !important;
+}
+
+.launch-month {
+  font-size: 0.875rem;
+  color: #6b7280 !important;
+  text-transform: uppercase;
+}
+
+.launch-details {
+  flex: 1;
+  padding-left: 1rem;
+}
+
+.launch-mission {
+  font-weight: 600;
+  color: #1f2937 !important;
+  margin-bottom: 0.25rem;
+}
+
+.launch-provider {
+  font-size: 0.875rem;
+  color: #6b7280 !important;
+  margin-bottom: 0.5rem;
+}
+
+.launch-location {
+  font-size: 0.875rem;
+  color: #4b5563 !important;
+  display: flex;
+  align-items: center;
+}
+
+.launch-location svg {
+  margin-right: 0.25rem;
+  color: #6b7280 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .iss-tracker-container,
+  .planetary-system-container {
+    height: 300px;
+  }
+  
+  .launch-item {
+    flex-direction: column;
+  }
+  
+  .launch-date {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb !important;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    min-width: auto;
+    padding-right: 0;
+  }
+  
+  .launch-details {
+    padding-left: 0;
+  }
+}

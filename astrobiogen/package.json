@@ -1,0 +1,33 @@
+{
+  "name": "astrobiogen",
+  "version": "1.0.0",
+  "description": "AstroBioGen - AI-Powered Genetic Insight Explorer for Space Biology",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "cd server && npx nodemon index.js",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "build": "cd client && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "auto-server": "cd server && node index.js && node update-client-port.js"
+  },
+  "keywords": [
+    "space biology",
+    "genetics",
+    "NASA",
+    "GeneLab",
+    "AI",
+    "Groq",
+    "Tavily",
+    "gene expression",
+    "microgravity",
+    "space medicine"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
